@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D107E58515B382EE00A83A72 /* MIDIIODevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D107E58415B382EE00A83A72 /* MIDIIODevice.m */; };
+		D107E58615B382EE00A83A72 /* MIDIIODevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D107E58415B382EE00A83A72 /* MIDIIODevice.m */; };
+		D13DC1F614F1AA2900FB7F6A /* MIDISnapShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D13DC1F514F1AA2900FB7F6A /* MIDISnapShot.m */; };
+		D13DC1F714F1AA2900FB7F6A /* MIDISnapShot.m in Sources */ = {isa = PBXBuildFile; fileRef = D13DC1F514F1AA2900FB7F6A /* MIDISnapShot.m */; };
+		D13DC1FB14F1B2A900FB7F6A /* MIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */; };
+		D13DC1FC14F1B2A900FB7F6A /* MIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */; };
+		D1AA3D2C14F054440029BBA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D2B14F054440029BBA7 /* Cocoa.framework */; };
+		D1AA3D3614F054450029BBA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D3414F054450029BBA7 /* InfoPlist.strings */; };
+		D1AA3D3814F054450029BBA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3D3714F054450029BBA7 /* main.m */; };
+		D1AA3D3C14F054450029BBA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D3A14F054450029BBA7 /* Credits.rtf */; };
+		D1AA3D3F14F054450029BBA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3D3E14F054450029BBA7 /* AppDelegate.m */; };
+		D1AA3D4214F054450029BBA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D4014F054450029BBA7 /* MainMenu.xib */; };
+		D1AA3D4A14F054450029BBA7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D4914F054450029BBA7 /* SenTestingKit.framework */; };
+		D1AA3D4B14F054450029BBA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D2B14F054440029BBA7 /* Cocoa.framework */; };
+		D1AA3D5314F054450029BBA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D5114F054450029BBA7 /* InfoPlist.strings */; };
+		D1AA3D5614F054450029BBA7 /* Slice_MachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3D5514F054450029BBA7 /* Slice_MachineTests.m */; };
+		D1AA3D6114F054FF0029BBA7 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D6014F054FF0029BBA7 /* CoreMIDI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1AA3D4C14F054450029BBA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1AA3D1E14F054440029BBA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1AA3D2614F054440029BBA7;
+			remoteInfo = "Slice Machine";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D107E58315B382EE00A83A72 /* MIDIIODevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIIODevice.h; sourceTree = "<group>"; };
+		D107E58415B382EE00A83A72 /* MIDIIODevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIIODevice.m; sourceTree = "<group>"; };
+		D13DC1F414F1AA2900FB7F6A /* MIDISnapShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDISnapShot.h; sourceTree = "<group>"; };
+		D13DC1F514F1AA2900FB7F6A /* MIDISnapShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDISnapShot.m; sourceTree = "<group>"; };
+		D13DC1F914F1B2A900FB7F6A /* MIDIDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIDevice.h; sourceTree = "<group>"; };
+		D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIDevice.m; sourceTree = "<group>"; };
+		D1AA3D2714F054440029BBA7 /* Slice Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slice Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AA3D2B14F054440029BBA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D1AA3D2E14F054440029BBA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D1AA3D2F14F054440029BBA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D1AA3D3014F054440029BBA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D1AA3D3314F054450029BBA7 /* Slice Machine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Slice Machine-Info.plist"; sourceTree = "<group>"; };
+		D1AA3D3514F054450029BBA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1AA3D3714F054450029BBA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1AA3D3914F054450029BBA7 /* Slice Machine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Slice Machine-Prefix.pch"; sourceTree = "<group>"; };
+		D1AA3D3B14F054450029BBA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D1AA3D3D14F054450029BBA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D1AA3D3E14F054450029BBA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D1AA3D4114F054450029BBA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D1AA3D4814F054450029BBA7 /* Slice MachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slice MachineTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AA3D4914F054450029BBA7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D1AA3D5014F054450029BBA7 /* Slice MachineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Slice MachineTests-Info.plist"; sourceTree = "<group>"; };
+		D1AA3D5214F054450029BBA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D1AA3D5414F054450029BBA7 /* Slice_MachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Slice_MachineTests.h; sourceTree = "<group>"; };
+		D1AA3D5514F054450029BBA7 /* Slice_MachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Slice_MachineTests.m; sourceTree = "<group>"; };
+		D1AA3D6014F054FF0029BBA7 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1AA3D2414F054440029BBA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D6114F054FF0029BBA7 /* CoreMIDI.framework in Frameworks */,
+				D1AA3D2C14F054440029BBA7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1AA3D4414F054450029BBA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D4A14F054450029BBA7 /* SenTestingKit.framework in Frameworks */,
+				D1AA3D4B14F054450029BBA7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1AA3D1C14F054440029BBA7 = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D3114F054440029BBA7 /* Slice Machine */,
+				D1AA3D4E14F054450029BBA7 /* Slice MachineTests */,
+				D1AA3D2A14F054440029BBA7 /* Frameworks */,
+				D1AA3D2814F054440029BBA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1AA3D2814F054440029BBA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D2714F054440029BBA7 /* Slice Machine.app */,
+				D1AA3D4814F054450029BBA7 /* Slice MachineTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1AA3D2A14F054440029BBA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D6014F054FF0029BBA7 /* CoreMIDI.framework */,
+				D1AA3D2B14F054440029BBA7 /* Cocoa.framework */,
+				D1AA3D4914F054450029BBA7 /* SenTestingKit.framework */,
+				D1AA3D2D14F054440029BBA7 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1AA3D2D14F054440029BBA7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D2E14F054440029BBA7 /* AppKit.framework */,
+				D1AA3D2F14F054440029BBA7 /* CoreData.framework */,
+				D1AA3D3014F054440029BBA7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D1AA3D3114F054440029BBA7 /* Slice Machine */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D3D14F054450029BBA7 /* AppDelegate.h */,
+				D1AA3D3E14F054450029BBA7 /* AppDelegate.m */,
+				D1AA3D4014F054450029BBA7 /* MainMenu.xib */,
+				D1AA3D5F14F054D50029BBA7 /* Classes */,
+				D1AA3D3214F054450029BBA7 /* Supporting Files */,
+			);
+			path = "Slice Machine";
+			sourceTree = "<group>";
+		};
+		D1AA3D3214F054450029BBA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D3314F054450029BBA7 /* Slice Machine-Info.plist */,
+				D1AA3D3414F054450029BBA7 /* InfoPlist.strings */,
+				D1AA3D3714F054450029BBA7 /* main.m */,
+				D1AA3D3914F054450029BBA7 /* Slice Machine-Prefix.pch */,
+				D1AA3D3A14F054450029BBA7 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1AA3D4E14F054450029BBA7 /* Slice MachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D5414F054450029BBA7 /* Slice_MachineTests.h */,
+				D1AA3D5514F054450029BBA7 /* Slice_MachineTests.m */,
+				D1AA3D4F14F054450029BBA7 /* Supporting Files */,
+			);
+			path = "Slice MachineTests";
+			sourceTree = "<group>";
+		};
+		D1AA3D4F14F054450029BBA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D5014F054450029BBA7 /* Slice MachineTests-Info.plist */,
+				D1AA3D5114F054450029BBA7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1AA3D5F14F054D50029BBA7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D1AA3D6514F064EC0029BBA7 /* MIDI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D1AA3D6514F064EC0029BBA7 /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				D13DC1F414F1AA2900FB7F6A /* MIDISnapShot.h */,
+				D13DC1F514F1AA2900FB7F6A /* MIDISnapShot.m */,
+				D13DC1F914F1B2A900FB7F6A /* MIDIDevice.h */,
+				D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */,
+				D107E58315B382EE00A83A72 /* MIDIIODevice.h */,
+				D107E58415B382EE00A83A72 /* MIDIIODevice.m */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1AA3D2614F054440029BBA7 /* Slice Machine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1AA3D5914F054450029BBA7 /* Build configuration list for PBXNativeTarget "Slice Machine" */;
+			buildPhases = (
+				D1AA3D2314F054440029BBA7 /* Sources */,
+				D1AA3D2414F054440029BBA7 /* Frameworks */,
+				D1AA3D2514F054440029BBA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Slice Machine";
+			productName = "Slice Machine";
+			productReference = D1AA3D2714F054440029BBA7 /* Slice Machine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1AA3D4714F054450029BBA7 /* Slice MachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1AA3D5C14F054450029BBA7 /* Build configuration list for PBXNativeTarget "Slice MachineTests" */;
+			buildPhases = (
+				D1AA3D4314F054450029BBA7 /* Sources */,
+				D1AA3D4414F054450029BBA7 /* Frameworks */,
+				D1AA3D4514F054450029BBA7 /* Resources */,
+				D1AA3D4614F054450029BBA7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1AA3D4D14F054450029BBA7 /* PBXTargetDependency */,
+			);
+			name = "Slice MachineTests";
+			productName = "Slice MachineTests";
+			productReference = D1AA3D4814F054450029BBA7 /* Slice MachineTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1AA3D1E14F054440029BBA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D1AA3D2114F054440029BBA7 /* Build configuration list for PBXProject "Slice Machine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D1AA3D1C14F054440029BBA7;
+			productRefGroup = D1AA3D2814F054440029BBA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1AA3D2614F054440029BBA7 /* Slice Machine */,
+				D1AA3D4714F054450029BBA7 /* Slice MachineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1AA3D2514F054440029BBA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D3614F054450029BBA7 /* InfoPlist.strings in Resources */,
+				D1AA3D3C14F054450029BBA7 /* Credits.rtf in Resources */,
+				D1AA3D4214F054450029BBA7 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1AA3D4514F054450029BBA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D5314F054450029BBA7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D1AA3D4614F054450029BBA7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1AA3D2314F054440029BBA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D3814F054450029BBA7 /* main.m in Sources */,
+				D1AA3D3F14F054450029BBA7 /* AppDelegate.m in Sources */,
+				D13DC1F614F1AA2900FB7F6A /* MIDISnapShot.m in Sources */,
+				D13DC1FB14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
+				D107E58515B382EE00A83A72 /* MIDIIODevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1AA3D4314F054450029BBA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1AA3D5614F054450029BBA7 /* Slice_MachineTests.m in Sources */,
+				D13DC1F714F1AA2900FB7F6A /* MIDISnapShot.m in Sources */,
+				D13DC1FC14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
+				D107E58615B382EE00A83A72 /* MIDIIODevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1AA3D4D14F054450029BBA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1AA3D2614F054440029BBA7 /* Slice Machine */;
+			targetProxy = D1AA3D4C14F054450029BBA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1AA3D3414F054450029BBA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1AA3D3514F054450029BBA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D1AA3D3A14F054450029BBA7 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1AA3D3B14F054450029BBA7 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D1AA3D4014F054450029BBA7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1AA3D4114F054450029BBA7 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D1AA3D5114F054450029BBA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1AA3D5214F054450029BBA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1AA3D5714F054450029BBA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D1AA3D5814F054450029BBA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D1AA3D5A14F054450029BBA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Slice_Machine-hbmxgoxsnpasyzbphutpvchpfpkb/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";
+				INFOPLIST_FILE = "Slice Machine/Slice Machine-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D1AA3D5B14F054450029BBA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Slice_Machine-hbmxgoxsnpasyzbphutpvchpfpkb/Build/Products/Debug\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";
+				INFOPLIST_FILE = "Slice Machine/Slice Machine-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D1AA3D5D14F054450029BBA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Slice Machine.app/Contents/MacOS/Slice Machine";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";
+				INFOPLIST_FILE = "Slice MachineTests/Slice MachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D1AA3D5E14F054450029BBA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Slice Machine.app/Contents/MacOS/Slice Machine";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";
+				INFOPLIST_FILE = "Slice MachineTests/Slice MachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1AA3D2114F054440029BBA7 /* Build configuration list for PBXProject "Slice Machine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AA3D5714F054450029BBA7 /* Debug */,
+				D1AA3D5814F054450029BBA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1AA3D5914F054450029BBA7 /* Build configuration list for PBXNativeTarget "Slice Machine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AA3D5A14F054450029BBA7 /* Debug */,
+				D1AA3D5B14F054450029BBA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1AA3D5C14F054450029BBA7 /* Build configuration list for PBXNativeTarget "Slice MachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1AA3D5D14F054450029BBA7 /* Debug */,
+				D1AA3D5E14F054450029BBA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1AA3D1E14F054440029BBA7 /* Project object */;
+}
