@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MIDISnapShot.h"
 #import "MIDIDevice.h"
+#import "MIDIClient.h"
+#import "MIDIPort.h"
 #import <CoreMIDI/CoreMIDI.h>
 
 #define MSG_SIZE 3
@@ -26,18 +28,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     MIDISnapShot* snapshot = [[MIDISnapShot alloc] init];
     MIDIDevice* launchPad = [[snapshot destinations] lastObject];
-        
-    MIDIClientRef client;
-    MIDIPortRef outPort;
-    OSStatus status;
-    status = MIDIClientCreate(CFSTR("SliceMachine_Client"), NULL, NULL, &client);
-    if (status) {
-        [NSException raise:@"could not create midi client" format:@"error:%s",GetMacOSStatusErrorString(status)];
-    }
-    status = MIDIOutputPortCreate(client, CFSTR("SliceMachine_OutputPort"), &outPort);
-    if (status) {
-        [NSException raise:@"could not create midi output port" format:@"error:%s",GetMacOSStatusErrorString(status)];
-    }
+    MIDIClient* client = [[MIDIClient alloc] init];
+    MIDIPort* output = [client outputPortWithName:@"output"];
     
     MIDITimeStamp timestamp = 0; // Play now...
     Byte buffer[1024];
@@ -47,7 +39,10 @@
     
     currentPacket = MIDIPacketListAdd(packetList, sizeof(buffer), currentPacket, timestamp, MSG_SIZE, noteon);
     // Send it!
-    status = MIDISend(outPort, [launchPad destinationRef], packetList);
+    OSStatus status = MIDISend([output portRef], [launchPad destinationRef], packetList);
+    if (status) {
+        [NSException raise:@"could not send midi packets" format:@"%s",GetMacOSStatusErrorString(status)];
+    }
 }
 
 @end
