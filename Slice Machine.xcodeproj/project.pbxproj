@@ -48,6 +48,7 @@
 		D16EACF215B78C170058DA53 /* MIDIOutputPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIOutputPort.h; sourceTree = "<group>"; };
 		D16EACF315B78C170058DA53 /* MIDIOutputPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIOutputPort.m; sourceTree = "<group>"; };
 		D16EACF615B790ED0058DA53 /* MIDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIConstants.h; sourceTree = "<group>"; };
+		D16EACF815B8787D0058DA53 /* LaunchPadConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchPadConstants.h; sourceTree = "<group>"; };
 		D1AA3D2714F054440029BBA7 /* Slice Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slice Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA3D2B14F054440029BBA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D1AA3D2E14F054440029BBA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -92,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D16EACF715B8786F0058DA53 /* LaunchPad */ = {
+			isa = PBXGroup;
+			children = (
+				D16EACF815B8787D0058DA53 /* LaunchPadConstants.h */,
+			);
+			path = LaunchPad;
+			sourceTree = "<group>";
+		};
 		D1AA3D1C14F054440029BBA7 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +187,7 @@
 		D1AA3D5F14F054D50029BBA7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D16EACF715B8786F0058DA53 /* LaunchPad */,
 				D1AA3D6514F064EC0029BBA7 /* MIDI */,
 			);
 			path = Classes;

@@ -27,8 +27,8 @@
     MIDIDevice* launchPad = [[snapshot destinations] lastObject];
     MIDIOutputPort* output = [[MIDIClient defaultClient] outputPortWithName:@"output"];
     
-    Byte msg[] = {NOTE_ON, 0, 15}; 
-    [output sendByteArray:msg ofLength:3 toDestination:[launchPad destinationRef]];
+    Byte msg[] = {NOTE_ON, 0, 15,NOTE_ON,8,15}; 
+    [output sendByteArray:msg ofLength:6 toDestination:[launchPad destinationRef]];
 }
 
 @end
