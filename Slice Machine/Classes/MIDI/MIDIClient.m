@@ -42,6 +42,22 @@ static void midiChange(const MIDINotification* message, void* refCon) {
     return self;
 }
 
+- (void)dealloc {
+    [_outputPorts release];
+    [super dealloc];
+}
+
+#pragma mark - The Default Client
+
+MIDIClient* __default = nil;
+
++ (MIDIClient*)defaultClient {
+    if (!__default) {
+        __default = [[MIDIClient alloc] init];
+    }
+    return __default;
+}
+
 #pragma mark - Getting Properties
 
 - (NSDictionary*)outputPorts {
@@ -65,8 +81,8 @@ static void midiChange(const MIDINotification* message, void* refCon) {
 
 #pragma mark - Creating MIDIPorts
 
-- (MIDIPort*)outputPortWithName:(NSString *)name {
-    MIDIPort* port = [[self outputPorts] valueForKey:name];
+- (MIDIOutputPort*)outputPortWithName:(NSString *)name {
+    MIDIOutputPort* port = [[self outputPorts] valueForKey:name];
     if (!port) {
         // Create the port...
         MIDIPortRef outPort;
@@ -74,7 +90,7 @@ static void midiChange(const MIDINotification* message, void* refCon) {
         if (status) {
             [NSException raise:@"could not create midi output port" format:@"error:%s",GetMacOSStatusErrorString(status)];
         }
-        port = [[[MIDIPort alloc] initWithMIDIPortRef:outPort andType:MIDIPortType_Output andName:name] autorelease];
+        port = [[[MIDIOutputPort alloc] initWithMIDIPortRef:outPort andName:name] autorelease];
         // Update the dictionary of output ports...
         NSMutableDictionary* outputsCopy = [NSMutableDictionary dictionaryWithDictionary:[self outputPorts]];
         [outputsCopy setValue:port forKey:name];

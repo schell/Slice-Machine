@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMIDI/CoreMIDI.h>
-#import "MIDIPort.h"
+#import "MIDIOutputPort.h"
 
 /** A midi notification handler. */
 static void midiChange(const MIDINotification* message, void* refCon);
@@ -18,6 +18,12 @@ static void midiChange(const MIDINotification* message, void* refCon);
     MIDIClientRef _clientRef;
     NSDictionary* _outputPorts;
 }
+
+#pragma mark - The Default MIDIClient
+/// @name The Default MIDIClient
+
+/** A default MIDIClient for sending/receiving midi packets. */
++ (MIDIClient*)defaultClient;
 
 #pragma mark - Getting CoreMIDI Properties
 /// @name Getting CoreMIDI Properties
@@ -36,6 +42,6 @@ static void midiChange(const MIDINotification* message, void* refCon);
  
  If the port does not yet exist, one is created. Stores the created port in outputPorts. 
  */
-- (MIDIPort*)outputPortWithName:(NSString*)name;
+- (MIDIOutputPort*)outputPortWithName:(NSString*)name;
 
 @end

@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-/** An object representing the current state of MIDI affairs. */
+/** An object representing the current state of MIDI affairs. 
+ 
+ A MIDISnapShot is basically a listing of all the sources and
+ destinations at a given time. To update the snapshot call renew
+ and then call other functions for particular sources or 
+ destinations. 
+ */
 @interface MIDISnapShot : NSObject {
     NSArray* _sources;
     NSArray* _destinations;

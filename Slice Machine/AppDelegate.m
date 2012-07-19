@@ -7,15 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreMIDI/CoreMIDI.h>
 #import "MIDISnapShot.h"
 #import "MIDIDevice.h"
 #import "MIDIClient.h"
-#import "MIDIPort.h"
-#import <CoreMIDI/CoreMIDI.h>
-
-#define MSG_SIZE 3
-#define NOTE_ON 0x90
-#define NOTE_OFF 0x80
+#import "MIDIOutputPort.h"
+#import "MIDIConstants.h"
 
 @implementation AppDelegate
 
@@ -28,21 +25,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     MIDISnapShot* snapshot = [[MIDISnapShot alloc] init];
     MIDIDevice* launchPad = [[snapshot destinations] lastObject];
-    MIDIClient* client = [[MIDIClient alloc] init];
-    MIDIPort* output = [client outputPortWithName:@"output"];
+    MIDIOutputPort* output = [[MIDIClient defaultClient] outputPortWithName:@"output"];
     
-    MIDITimeStamp timestamp = 0; // Play now...
-    Byte buffer[1024];
-    MIDIPacketList* packetList = (MIDIPacketList*)buffer;
-    MIDIPacket* currentPacket = MIDIPacketListInit(packetList);
-    Byte noteon[MSG_SIZE] = {NOTE_ON, 0, 15}; 
-    
-    currentPacket = MIDIPacketListAdd(packetList, sizeof(buffer), currentPacket, timestamp, MSG_SIZE, noteon);
-    // Send it!
-    OSStatus status = MIDISend([output portRef], [launchPad destinationRef], packetList);
-    if (status) {
-        [NSException raise:@"could not send midi packets" format:@"%s",GetMacOSStatusErrorString(status)];
-    }
+    Byte msg[] = {NOTE_ON, 0, 15}; 
+    [output sendByteArray:msg ofLength:3 toDestination:[launchPad destinationRef]];
 }
 
 @end

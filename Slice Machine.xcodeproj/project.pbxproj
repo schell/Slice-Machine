@@ -13,8 +13,8 @@
 		D13DC1FC14F1B2A900FB7F6A /* MIDIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */; };
 		D168EE5C15B4EE7200C6A98C /* MIDIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D168EE5B15B4EE7200C6A98C /* MIDIClient.m */; };
 		D168EE5D15B4EE7200C6A98C /* MIDIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D168EE5B15B4EE7200C6A98C /* MIDIClient.m */; };
-		D168EE6015B4F9A100C6A98C /* MIDIPort.m in Sources */ = {isa = PBXBuildFile; fileRef = D168EE5F15B4F9A100C6A98C /* MIDIPort.m */; };
-		D168EE6115B4F9A100C6A98C /* MIDIPort.m in Sources */ = {isa = PBXBuildFile; fileRef = D168EE5F15B4F9A100C6A98C /* MIDIPort.m */; };
+		D16EACF415B78C180058DA53 /* MIDIOutputPort.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EACF315B78C170058DA53 /* MIDIOutputPort.m */; };
+		D16EACF515B78C180058DA53 /* MIDIOutputPort.m in Sources */ = {isa = PBXBuildFile; fileRef = D16EACF315B78C170058DA53 /* MIDIOutputPort.m */; };
 		D1AA3D2C14F054440029BBA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D2B14F054440029BBA7 /* Cocoa.framework */; };
 		D1AA3D3614F054450029BBA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D3414F054450029BBA7 /* InfoPlist.strings */; };
 		D1AA3D3814F054450029BBA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3D3714F054450029BBA7 /* main.m */; };
@@ -45,8 +45,9 @@
 		D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIDevice.m; sourceTree = "<group>"; };
 		D168EE5A15B4EE7200C6A98C /* MIDIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIClient.h; sourceTree = "<group>"; };
 		D168EE5B15B4EE7200C6A98C /* MIDIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIClient.m; sourceTree = "<group>"; };
-		D168EE5E15B4F9A100C6A98C /* MIDIPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIPort.h; sourceTree = "<group>"; };
-		D168EE5F15B4F9A100C6A98C /* MIDIPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIPort.m; sourceTree = "<group>"; };
+		D16EACF215B78C170058DA53 /* MIDIOutputPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIOutputPort.h; sourceTree = "<group>"; };
+		D16EACF315B78C170058DA53 /* MIDIOutputPort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIDIOutputPort.m; sourceTree = "<group>"; };
+		D16EACF615B790ED0058DA53 /* MIDIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIConstants.h; sourceTree = "<group>"; };
 		D1AA3D2714F054440029BBA7 /* Slice Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slice Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AA3D2B14F054440029BBA7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D1AA3D2E14F054440029BBA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -185,14 +186,15 @@
 		D1AA3D6514F064EC0029BBA7 /* MIDI */ = {
 			isa = PBXGroup;
 			children = (
-				D168EE5A15B4EE7200C6A98C /* MIDIClient.h */,
-				D168EE5B15B4EE7200C6A98C /* MIDIClient.m */,
-				D168EE5E15B4F9A100C6A98C /* MIDIPort.h */,
-				D168EE5F15B4F9A100C6A98C /* MIDIPort.m */,
 				D13DC1F414F1AA2900FB7F6A /* MIDISnapShot.h */,
 				D13DC1F514F1AA2900FB7F6A /* MIDISnapShot.m */,
 				D13DC1F914F1B2A900FB7F6A /* MIDIDevice.h */,
 				D13DC1FA14F1B2A900FB7F6A /* MIDIDevice.m */,
+				D168EE5A15B4EE7200C6A98C /* MIDIClient.h */,
+				D168EE5B15B4EE7200C6A98C /* MIDIClient.m */,
+				D16EACF215B78C170058DA53 /* MIDIOutputPort.h */,
+				D16EACF315B78C170058DA53 /* MIDIOutputPort.m */,
+				D16EACF615B790ED0058DA53 /* MIDIConstants.h */,
 			);
 			path = MIDI;
 			sourceTree = "<group>";
@@ -309,7 +311,7 @@
 				D13DC1F614F1AA2900FB7F6A /* MIDISnapShot.m in Sources */,
 				D13DC1FB14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
 				D168EE5C15B4EE7200C6A98C /* MIDIClient.m in Sources */,
-				D168EE6015B4F9A100C6A98C /* MIDIPort.m in Sources */,
+				D16EACF415B78C180058DA53 /* MIDIOutputPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +323,7 @@
 				D13DC1F714F1AA2900FB7F6A /* MIDISnapShot.m in Sources */,
 				D13DC1FC14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
 				D168EE5D15B4EE7200C6A98C /* MIDIClient.m in Sources */,
-				D168EE6115B4F9A100C6A98C /* MIDIPort.m in Sources */,
+				D16EACF515B78C180058DA53 /* MIDIOutputPort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
