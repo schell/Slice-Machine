@@ -26,6 +26,8 @@
 		D1AA3D5314F054450029BBA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D1AA3D5114F054450029BBA7 /* InfoPlist.strings */; };
 		D1AA3D5614F054450029BBA7 /* Slice_MachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AA3D5514F054450029BBA7 /* Slice_MachineTests.m */; };
 		D1AA3D6114F054FF0029BBA7 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AA3D6014F054FF0029BBA7 /* CoreMIDI.framework */; };
+		D1F8D06915BCE4DA00407872 /* SMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F8D06815BCE4DA00407872 /* SMView.m */; };
+		D1F8D06A15BCE4DA00407872 /* SMView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F8D06815BCE4DA00407872 /* SMView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		D1AA3D5414F054450029BBA7 /* Slice_MachineTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Slice_MachineTests.h; sourceTree = "<group>"; };
 		D1AA3D5514F054450029BBA7 /* Slice_MachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Slice_MachineTests.m; sourceTree = "<group>"; };
 		D1AA3D6014F054FF0029BBA7 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		D1F8D06715BCE4DA00407872 /* SMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMView.h; path = View/SMView.h; sourceTree = "<group>"; };
+		D1F8D06815BCE4DA00407872 /* SMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMView.m; path = View/SMView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 			children = (
 				D16EACF715B8786F0058DA53 /* LaunchPad */,
 				D1AA3D6514F064EC0029BBA7 /* MIDI */,
+				D1F8D06715BCE4DA00407872 /* SMView.h */,
+				D1F8D06815BCE4DA00407872 /* SMView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,7 +260,7 @@
 		D1AA3D1E14F054440029BBA7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = D1AA3D2114F054440029BBA7 /* Build configuration list for PBXProject "Slice Machine" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -322,6 +328,7 @@
 				D13DC1FB14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
 				D168EE5C15B4EE7200C6A98C /* MIDIClient.m in Sources */,
 				D16EACF415B78C180058DA53 /* MIDIOutputPort.m in Sources */,
+				D1F8D06915BCE4DA00407872 /* SMView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +341,7 @@
 				D13DC1FC14F1B2A900FB7F6A /* MIDIDevice.m in Sources */,
 				D168EE5D15B4EE7200C6A98C /* MIDIClient.m in Sources */,
 				D16EACF515B78C180058DA53 /* MIDIOutputPort.m in Sources */,
+				D1F8D06A15BCE4DA00407872 /* SMView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

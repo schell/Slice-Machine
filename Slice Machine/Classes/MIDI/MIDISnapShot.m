@@ -13,6 +13,7 @@
 @interface MIDISnapShot (Private)
 - (NSArray*)enumerateSources;
 - (NSArray*)enumerateDestinations;
+- (MIDIDevice*)deviceWithName:(NSString*)name inArray:(NSArray*)array;
 @end
 
 
@@ -33,7 +34,24 @@
     [super dealloc];
 }
 
+#pragma mark - Class Properties
+
+static MIDISnapShot* __default = nil;
+
++ (MIDISnapShot*)defaultSnapShot {
+    if (!__default) {
+        __default = [[MIDISnapShot alloc] init];
+    }
+    return __default;
+}
+
 #pragma mark - Getters
+
+- (NSString*)description {
+    NSString* description = [super description];
+    description = [description stringByAppendingFormat:@"\n sources: %@\n   destinations: %@",[[self sources] description], [[self destinations] description]];
+    return description;
+}
 
 - (NSArray*)sources {
     if (!_sources) {
@@ -94,4 +112,24 @@
         _sources = nil;
     }
 }
+
+#pragma mark - Getting Specific Devices
+
+- (MIDIDevice*)deviceWithName:(NSString *)name inArray:(NSArray *)array {
+    for (MIDIDevice* device in array) {
+        if ([[device name] isEqualToString:name]) {
+            return device;
+        }
+    }
+    return nil;
+}
+
+- (MIDIDevice*)destinationWithName:(NSString *)name {
+    return [self deviceWithName:name inArray:[self destinations]];
+}
+
+- (MIDIDevice*)sourceWithName:(NSString *)name {
+    return [self deviceWithName:name inArray:[self sources]];
+}
+
 @end

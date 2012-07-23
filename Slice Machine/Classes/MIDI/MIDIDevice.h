@@ -25,6 +25,8 @@
 #pragma mark - Getters
 /** The device's info dictionary. */
 - (NSDictionary*)info;
+/** The device's name. */
+- (NSString*)name;
 /** An enumeration of entity info. */
 - (NSArray*)entities;
 /** The device's unique ID. */

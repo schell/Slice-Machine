@@ -9,20 +9,25 @@
 #import "MIDIClient.h"
 
 static void midiChange(const MIDINotification* message, void* refCon) {
+    MIDIClient* client = (MIDIClient*)refCon;
     switch (message->messageID) {
-        case kMIDIMsgSetupChanged:
-            break;
         case kMIDIMsgObjectAdded:
+            [client handleAddObjectNotification:(MIDIObjectAddRemoveNotification*)message];
             break;
         case kMIDIMsgObjectRemoved:
+            [client handleRemoveObjectNotification:(MIDIObjectAddRemoveNotification*)message];
             break;
         case kMIDIMsgPropertyChanged:
+            [client handlePropertyChangedNotification:(MIDIObjectPropertyChangeNotification*)message];
             break;
         case kMIDIMsgThruConnectionsChanged:
+            [client handleThruConnectionChangedNotification:(MIDINotification*)message];
             break;
         case kMIDIMsgSerialPortOwnerChanged:
+            [client handleSerialPortOwnerChangedNotification:(MIDINotification*)message];
             break;
         case kMIDIMsgIOError:
+            [client handleIOErrorNotification:(MIDINotification*)message];
             break;
         default:
             break;
@@ -100,5 +105,21 @@ MIDIClient* __default = nil;
     }
     return port;
 }
+
+#pragma mark - Handling System Messages
+
+- (void)handleAddObjectNotification:(MIDIObjectAddRemoveNotification*)note {
+
+}
+
+- (void)handleRemoveObjectNotification:(MIDIObjectAddRemoveNotification*)note {}
+
+- (void)handlePropertyChangedNotification:(MIDIObjectPropertyChangeNotification*)note {}
+
+- (void)handleThruConnectionChangedNotification:(MIDINotification*)note {}
+
+- (void)handleSerialPortOwnerChangedNotification:(MIDINotification*)note {}
+
+- (void)handleIOErrorNotification:(MIDINotification*)note {}
 
 @end

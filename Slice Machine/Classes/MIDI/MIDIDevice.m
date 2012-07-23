@@ -73,6 +73,10 @@
     return _info;
 }
 
+- (NSString*)name {
+    return [[self info] valueForKey:@"name"];
+}
+
 - (NSArray*)entities {
     if ([self info] && [[[self info] allKeys] containsObject:@"entities"]) {
         return [[self info] valueForKey:@"entities"];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MIDIDevice.h"
 
 /** An object representing the current state of MIDI affairs. 
  
@@ -19,6 +20,12 @@
     NSArray* _sources;
     NSArray* _destinations;
 }
+
+#pragma mark - Class Properties
+/// @name Class Properties
+
+/** The default midi snap shot. */
++ (MIDISnapShot*)defaultSnapShot;
 
 #pragma mark - Getting Properties
 /// @name Getting Properties
@@ -41,5 +48,20 @@
 
 /** Throws away the cached source and destination infos. */
 - (void)renew;
+
+#pragma mark - Getting Specific Devices
+/// @name Getting Specific Devices
+
+/** Retrieves a midi destination device with the given name. 
+ 
+ Returns nil of no device is found.
+ */
+- (MIDIDevice*)destinationWithName:(NSString*)name;
+/** Retrieves a midi source device with the given name. 
+ 
+ Returns nil of no device is found.
+ */
+- (MIDIDevice*)sourceWithName:(NSString*)name;
+
 
 @end

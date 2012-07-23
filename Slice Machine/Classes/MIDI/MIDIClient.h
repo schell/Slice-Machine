@@ -44,4 +44,20 @@ static void midiChange(const MIDINotification* message, void* refCon);
  */
 - (MIDIOutputPort*)outputPortWithName:(NSString*)name;
 
+#pragma mark - Handling MIDI System Messages
+/// @name Handling MIDI System Messages
+
+/** After an object is added to the midi snap shot. */
+- (void)handleAddObjectNotification:(MIDIObjectAddRemoveNotification*)note;
+/** After an object is removed. */
+- (void)handleRemoveObjectNotification:(MIDIObjectAddRemoveNotification*)note;
+/** After an object's property has been changed. */
+- (void)handlePropertyChangedNotification:(MIDIObjectPropertyChangeNotification*)note;
+/** After a thru connection has changed. */
+- (void)handleThruConnectionChangedNotification:(MIDINotification*)note;
+/** After a serial port connectio nhas changed. */
+- (void)handleSerialPortOwnerChangedNotification:(MIDINotification*)note;
+/** After an io error. */
+- (void)handleIOErrorNotification:(MIDINotification*)note;
+
 @end
