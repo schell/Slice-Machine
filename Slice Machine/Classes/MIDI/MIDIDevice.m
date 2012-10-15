@@ -58,7 +58,7 @@
     MIDIObjectType realType;
     OSStatus status = MIDIObjectFindByUniqueID([self uniqueID], &objectRef, &realType);
     if (status) {
-        [NSException raise:@"encountered unexpected OSStatus" format:@"error:%",GetMacOSStatusErrorString(status)];
+        [NSException raise:@"encountered unexpected OSStatus" format:@"error:%s",GetMacOSStatusErrorString(status)];
     }
     
     if (type != realType) {
@@ -86,7 +86,7 @@
 
 - (MIDIUniqueID)uniqueID {
     if ([self info] && [[[self info] allKeys] containsObject:@"uniqueID"]) {
-        return [[[self info] valueForKey:@"uniqueID"] integerValue];
+        return [[[self info] valueForKey:@"uniqueID"] intValue];
     }
     return 0;
 }
@@ -95,7 +95,7 @@
     if ([self entities]) {
         NSArray* destinations = [[[self entities] objectAtIndex:0] valueForKey:@"destinations"];
         NSDictionary* first = [destinations objectAtIndex:0];
-        return [[first valueForKey:@"uniqueID"] integerValue];
+        return [[first valueForKey:@"uniqueID"] intValue];
     }
     return 0;
 }

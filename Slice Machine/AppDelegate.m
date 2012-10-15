@@ -85,10 +85,10 @@
 - (void)didHitOnButton:(NSButton*)button {
     MIDIOutputPort* output = [[MIDIClient defaultClient] outputPortWithName:@"output"];
     
-    Byte msg[] = {NOTE_ON, 0, 15,NOTE_ON,8,15}; 
+    Byte msg[] = {NOTE_ON, 0, 15, NOTE_ON, 8, 15};
     [output sendByteArray:msg ofLength:6 toDestination:[[self launchPad] destinationRef]];
-    
-    NSLog(@"%s",__FUNCTION__);
+    [[MIDISnapShot defaultSnapShot] renew];
+    NSLog(@"%s %s",__FUNCTION__,[[[MIDISnapShot defaultSnapShot] description] UTF8String]);
 }
 
 - (void)didHitOffButton:(NSButton*)button {

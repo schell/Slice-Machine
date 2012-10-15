@@ -260,7 +260,7 @@
 		D1AA3D1E14F054440029BBA7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = D1AA3D2114F054440029BBA7 /* Build configuration list for PBXProject "Slice Machine" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -439,6 +439,7 @@
 		D1AA3D5A14F054450029BBA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Slice_Machine-hbmxgoxsnpasyzbphutpvchpfpkb/Build/Products/Debug\"",
@@ -454,6 +455,7 @@
 		D1AA3D5B14F054450029BBA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Slice_Machine-hbmxgoxsnpasyzbphutpvchpfpkb/Build/Products/Debug\"",
@@ -470,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Slice Machine.app/Contents/MacOS/Slice Machine";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";
@@ -484,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Slice Machine.app/Contents/MacOS/Slice Machine";
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Slice Machine/Slice Machine-Prefix.pch";

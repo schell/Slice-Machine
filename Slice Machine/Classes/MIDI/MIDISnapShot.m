@@ -50,6 +50,8 @@ static MIDISnapShot* __default = nil;
 - (NSString*)description {
     NSString* description = [super description];
     description = [description stringByAppendingFormat:@"\n sources: %@\n   destinations: %@",[[self sources] description], [[self destinations] description]];
+    description = [description stringByReplacingOccurrencesOfString:@"\\n" withString:@"\r"];
+    description = [description stringByReplacingOccurrencesOfString:@"\\" withString:@""];
     return description;
 }
 
@@ -109,7 +111,7 @@ static MIDISnapShot* __default = nil;
     }
     if (_destinations) {
         [_destinations release];
-        _sources = nil;
+        _destinations = nil;
     }
 }
 

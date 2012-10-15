@@ -12,3 +12,7 @@ Sample code:
 MIDINotifyProc stuff:
 
 	http://stackoverflow.com/questions/4423166/translate-to-objective-c-from-objective-c
+
+MIDIReadProc:
+    
+    http://stackoverflow.com/questions/9051292/midireadproc-using-srcconnrefcon-to-listen-to-only-one-source
