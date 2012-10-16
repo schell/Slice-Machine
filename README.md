@@ -16,3 +16,4 @@ MIDINotifyProc stuff:
 MIDIReadProc:
     
     http://stackoverflow.com/questions/9051292/midireadproc-using-srcconnrefcon-to-listen-to-only-one-source
+    http://developer.apple.com/library/mac/#documentation/MusicAudio/Reference/CACoreMIDIRef/MIDIServices/index.html
